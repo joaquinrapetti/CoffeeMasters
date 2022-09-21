@@ -10,7 +10,34 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         // while i have nothing
-        EmptyView()
+        // EmptyView()
+        // ------------------------
+        
+        // TabView Navigation
+        TabView {
+            // ScreenPage
+            Text("Home Page")
+                // Tab icon in navigation as a link to...
+                .tabItem{
+                    Image(systemName: "cup.and.saucer")
+                    Text("Home Page")
+                }
+            OffersPage()
+                .tabItem{
+                    Image(systemName: "tag")
+                    Text("Offers")
+                }
+            Text("Order Page")
+                .tabItem{
+                    Image(systemName: "cart")
+                    Text("Order")
+                }
+            Text("Info Page")
+                .tabItem{
+                    Image(systemName: "info")
+                    Text("Info")
+                }
+        }
     }
 }
 
